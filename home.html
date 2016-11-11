@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Typescript</title>
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+
+    <h2>Typescript for beginners</h2>
+
+    <div>
+
+        <p>How many textblocks do you need?</p><input type="number" id="numberOfTextblocks">
+        <button type="button" id="createTextblock">Klick mich</button>
+
+    </div>
+
+    <!-- jQuery? -->
+
+    <!-- module loader -->
+    <script src="module/jspm_packages/system.js"></script>
+    <script src="module/jspm.config.js"></script>
+
+    <!-- module loading -->
+    <script>
+    
+        console.log(System);
+
+        System.defaultJSExtensions = true;
+
+        // File for loading all modules?
+        System.import("js/modules").then(function(){
+
+            console.log("textblockRequest loaded.");
+
+        });
+
+    </script>
+    <script>
+    
+        // jQuery?
+        var createTextblock = document.getElementById("createTextblock");
+        createTextblock.addEventListener('click', function() {
+
+            var textboxRequest = new TextblockRequest();
+            return textboxRequest.createTextblock(5);
+
+        })
+    
+    </script>   
+
+</body>
+</html>
