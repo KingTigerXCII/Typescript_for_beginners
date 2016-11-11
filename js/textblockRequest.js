@@ -1,4 +1,5 @@
 "use strict";
+const modules_1 = require("./modules");
 class TextblockRequest {
     createTextblock(numberOfTextblocks) {
         console.log("Request Textblocks");
@@ -9,7 +10,7 @@ class TextblockRequest {
 
         }
         */
-        let indexOfArray = arrayOfTextblocks.push(new Textblock("I'm a textblock ", "My name is ......."));
+        let indexOfArray = arrayOfTextblocks.push(new modules_1.Textblock("I'm a textblock ", "My name is ......."));
         document.body.innerHTML += arrayOfTextblocks[0].getTextblockWithCSSClass();
     }
 }

@@ -1,3 +1,5 @@
+import { Textblock } from "./modules";
+
 export class TextblockRequest {
 
     public createTextblock(numberOfTextblocks: number) {

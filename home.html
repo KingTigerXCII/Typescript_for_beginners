@@ -14,15 +14,15 @@
     <div>
 
         <p>How many textblocks do you need?</p><input type="number" id="numberOfTextblocks">
-        <button type="button" id="createTextblock">Klick mich</button>
+        <button type="button" id="createTextblock">Click</button>
 
     </div>
 
     <!-- jQuery? -->
 
     <!-- module loader -->
-    <script src="module/jspm_packages/system.js"></script>
-    <script src="module/jspm.config.js"></script>
+    <script src="modules/jspm_packages/system.js"></script>
+    <script src="modules/jspm.config.js"></script>
 
     <!-- module loading -->
     <script>
@@ -34,7 +34,7 @@
         // File for loading all modules?
         System.import("js/modules").then(function(){
 
-            console.log("textblockRequest loaded.");
+            console.log("modules loaded.");
 
         });
 
