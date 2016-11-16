@@ -18,7 +18,6 @@ export class TextblockRequest {
         let indexOfArray = arrayOfTextblocks.push(new Textblock("I'm a textblock ", "My name is .......")); 
         document.body.innerHTML += arrayOfTextblocks[0].getTextblockWithCSSClass();
 
-
     }
 
 }
