@@ -18,8 +18,7 @@
 
     </div>
 
-    <!-- jQuery? -->
-
+    <!-- jQuery -->
     <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
 
     <!-- module loader -->
@@ -34,26 +33,27 @@
         System.defaultJSExtensions = true;
 
         // File for loading all modules?
-        System.import("js/modules").then(function(){
+        System.import("js/modules").then(function(modules){
 
-            console.log("modules loaded.");
+            console.log("modules loaded: ", modules);
 
-        });
+            $(document).ready(function() {
+                $("#createTextblock").click(function() {
+                    console.log("button clicked");
 
-    </script>
-    <script>
-    
-        $(document).ready(function() {
-            $("#createTextblock").click(function() {
-                console.log("button clicked");
+                    var numberOfTextblocks = $('#numberOfTextblocks').val();
 
-                var textblockRequest = new TextblockRequest();
-                textblockRequest.createTextblock(5);
+                    console.log("numberOfTextblocks: ", numberOfTextblocks);
 
+                    var textblockRequest = new modules.TextblockRequest();
+                    textblockRequest.createTextblock(numberOfTextblocks);
+
+                });
             });
+
         });
 
-    </script>   
+    </script>  
 
 </body>
 </html>
